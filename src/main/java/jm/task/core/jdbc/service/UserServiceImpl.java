@@ -10,7 +10,7 @@ import java.util.List;
 
 public class UserServiceImpl implements UserService {
 
-   UserDaoHibernateImpl user = new UserDaoHibernateImpl();
+   UserDao user = new UserDaoHibernateImpl();
 
 
     public void createUsersTable() throws SQLException {

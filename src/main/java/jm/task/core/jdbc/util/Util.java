@@ -23,20 +23,6 @@ public class Util {
     private static SessionFactory sessionFactory;//для Hibernate
 
 
-    public static Connection getConnection() { //для JDBC
-        Connection connection = null;
-
-        try {
-            Class.forName(DB_DRIVER);
-            connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
-            System.out.println("Connection OK");
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
-            System.out.println("Connection ERROR");
-        }
-        return  connection;
-    }
-
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             try {
